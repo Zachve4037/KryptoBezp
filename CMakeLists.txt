@@ -4,4 +4,5 @@ project(KryptoBezp)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(KryptoBezp
-        VigenersCiphre.cpp)
+        src/VigenersCiphre.cpp
+        src/StreamCipher.cpp)
