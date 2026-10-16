@@ -1,0 +1,35 @@
+Vigenere: hladanie hesiel dlzky 15-25 (A-Z, mod 26)
+Statisticky odhad; pri kratkych textoch skontrolujte citatelnost.
+
+viegen1.txt
+Heslo: IDGKZQNOMYNTJOUIB
+Dlzka hesla: 17
+Jazyk: anglictina
+Pocet pismen: 975
+Skore: -2.3562
+Vystup: viegen1_desifrovane.txt
+
+viegen2.txt
+Heslo: AUZDMZRNFUXQSXHORWQLCLZLS
+Dlzka hesla: 25
+Jazyk: slovencina
+Pocet pismen: 964
+Skore: -2.5097
+Vystup: viegen2_desifrovane.txt
+
+viegen3.txt
+Heslo: QWERTYUIOPASDFG
+Dlzka hesla: 15
+Jazyk: slovencina
+Pocet pismen: 637
+Skore: -2.4724
+Vystup: viegen3_desifrovane.txt
+
+viegen4.txt
+Heslo: LIYZKFOREGYSDTRQNTK
+Dlzka hesla: 19
+Jazyk: slovencina
+Pocet pismen: 1139
+Skore: -2.5207
+Vystup: viegen4_desifrovane.txt
+

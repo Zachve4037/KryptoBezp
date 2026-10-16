@@ -1,0 +1,5 @@
+/build/
+/build-verify/
+/cmake-build-*/
+/.idea/
+__pycache__/

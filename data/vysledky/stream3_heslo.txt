@@ -1,0 +1,4 @@
+Heslo: 89898989
+Cas prelamovania (s): 105.080597
+Skusanych hesiel: 79898990
+Subor: stream3.bin

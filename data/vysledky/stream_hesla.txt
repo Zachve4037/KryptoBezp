@@ -1,0 +1,25 @@
+RC4 - hesla a casy prelamovania
+Rozsah: 10000000 az 99999999, heslo je retazec 8 ASCII cislic.
+Cas pri kazdom subore je cas od zaciatku spolocneho hladania po jeho najdenie.
+Pokusy pocitame spolocne pre vsetky subory. Ulozene casy sa pri dalsom spusteni nemenia.
+
+Heslo: 12345678
+Cas prelamovania (s): 2.506564
+Skusanych hesiel: 2345679
+Subor: stream1.bin
+
+Heslo: 55555555
+Cas prelamovania (s): 59.828266
+Skusanych hesiel: 45555556
+Subor: stream2.bin
+
+Heslo: 89898989
+Cas prelamovania (s): 105.080597
+Skusanych hesiel: 79898990
+Subor: stream3.bin
+
+Heslo: 73081638
+Cas prelamovania (s): 83.001187
+Skusanych hesiel: 63081639
+Subor: stream4.bin
+

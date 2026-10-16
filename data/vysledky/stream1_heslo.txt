@@ -1,0 +1,4 @@
+Heslo: 12345678
+Cas prelamovania (s): 2.506564
+Skusanych hesiel: 2345679
+Subor: stream1.bin

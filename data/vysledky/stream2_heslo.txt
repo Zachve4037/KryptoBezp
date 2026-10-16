@@ -1,0 +1,4 @@
+Heslo: 55555555
+Cas prelamovania (s): 59.828266
+Skusanych hesiel: 45555556
+Subor: stream2.bin
