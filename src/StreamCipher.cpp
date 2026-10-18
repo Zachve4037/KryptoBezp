@@ -24,7 +24,6 @@ constexpr std::uint32_t PRVE_HESLO = 10000000;
 constexpr std::uint32_t POSLEDNE_HESLO = 99999999;
 constexpr std::size_t DLZKA_KONTROLY = 64;
 
-// Rovnako ako getKey v povodnom stream.c: opakujeme ASCII znaky hesla.
 std::array<Byte, 256> getKey(const std::string& heslo) {
     std::array<Byte, 256> kluc{};
     for (std::size_t i = 0; i < kluc.size(); ++i) {
@@ -58,8 +57,6 @@ struct RC4 {
     }
 };
 
-// Prisna kontrola UTF-8 vratanie zakazu prilis dlheho kodovania a surrogatov.
-// Kontrolne znaky ani diakritiku nemenime; testujeme len platnost kodovania.
 struct Utf8 {
     int zostava = 0;
     Byte minimum = 0x80;
@@ -147,7 +144,6 @@ std::string zaznam(const Subor& subor) {
     return text.str();
 }
 
-// Ulozene heslo vzdy overime desifrovanim aktualneho vstupu. Cas zachovame.
 bool nacitajHeslo(Subor& subor, const fs::path& vystup) {
     std::ifstream vstup(cestaHesla(subor, vystup));
     std::string riadok;
@@ -192,7 +188,6 @@ bool sediZaciatok(const std::string& sifra, const std::array<Byte, DLZKA_KONTROL
     for (std::size_t i = 0; i < prud.size(); ++i) {
         if (!kontrola.pridaj(static_cast<Byte>(sifra[i]) ^ prud[i])) return false;
     }
-    // Posledny znak moze pokracovat za hranicou prvych 64 bajtov.
     return true;
 }
 

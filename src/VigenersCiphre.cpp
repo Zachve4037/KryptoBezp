@@ -27,7 +27,6 @@ bool jePismeno(char c) {
     return c >= 'A' && c <= 'Z';
 }
 
-// Male, priblizne jazykove modely priamo v programe, bez externych dat.
 struct Jazyk {
     std::string nazov;
     std::array<double, 26> logPravdepodobnost{};
@@ -121,7 +120,6 @@ std::string desifruj(std::string text, const std::string& heslo) {
     return text;
 }
 
-// Pre kazdu poziciu hesla najdeme najpravdepodobnejsi Caesarov posun.
 std::string odhadniHeslo(const std::vector<int>& text, int dlzka, const Jazyk& jazyk) {
     std::string heslo(dlzka, 'A');
     for (int pozicia = 0; pozicia < dlzka; ++pozicia) {
@@ -144,7 +142,6 @@ std::string odhadniHeslo(const std::vector<int>& text, int dlzka, const Jazyk& j
     return heslo;
 }
 
-// Vyssie skore znamena podobnost s jazykom, nejde o percento istoty.
 double ohodnot(const std::vector<int>& text, const std::string& heslo, const Jazyk& jazyk) {
     double skore = 0;
     int predosle = 0;
@@ -164,7 +161,6 @@ double ohodnot(const std::vector<int>& text, const std::string& heslo, const Jaz
     return skore / static_cast<double>(text.size());
 }
 
-// Menime vzdy jeden znak hesla, kym sa skore desifrovaneho textu zlepsuje.
 double doladHeslo(const std::vector<int>& text, std::string& heslo, const Jazyk& jazyk) {
     double najlepsie = ohodnot(text, heslo, jazyk);
     for (int kolo = 0; kolo < 10; ++kolo) {
@@ -189,7 +185,6 @@ double doladHeslo(const std::vector<int>& text, std::string& heslo, const Jazyk&
     return najlepsie;
 }
 
-// Opakovane heslo (napr. ABCABC) ma rovnaky ucinok ako najkratsia perioda.
 std::string skratHeslo(const std::string& heslo) {
     for (std::size_t dlzka = 1; dlzka <= heslo.size(); ++dlzka) {
         if (heslo.size() % dlzka != 0) {
@@ -302,7 +297,6 @@ int main(int argc, char* argv[]) {
                 std::cerr << subor.filename().string() << ": " << e.what() << '\n';
             }
         }
-        // Jednotlive spustenie neprepise pripadny prehlad celej davky.
         const fs::path prehladCesta = vystup / (fs::is_directory(vstup)
             ? "hesla.txt" : subory.front().stem().string() + "_heslo.txt");
         uloz(prehladCesta, prehlad.str());
