@@ -14,7 +14,6 @@
 #include <vector>
 
 #ifndef DEFAULT_DATA_DIR
-#define DEFAULT_DATA_DIR "data"
 #endif
 
 namespace fs = std::filesystem;
